@@ -60,3 +60,6 @@
 .portfolio-details a h2, .portfolio-details a p {
   color: var(--white-color);
 }
+.ml-2{
+width: 30px;
+}

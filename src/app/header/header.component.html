@@ -13,13 +13,21 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                       <ul class="navbar-nav ml-auto">
                           <li class="nav-item">
-                              <a class="nav-link" href="#hero">Inicio</a>
+                              <a class="nav-link" [routerLink]="['/inicio']" routerLinkActive="active" >Inicio</a>
                           </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="#portfolio">Eventos</a>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"  [routerLink]="['/eventos']" routerLinkActive="active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Eventos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item"  [routerLink]="['/alta']">Alta Eventos</a>
+                              <a class="dropdown-item"  [routerLink]="['/modificar']">Modificar Evento</a>
+                              <a class="dropdown-item"  [routerLink]="['/eliminar']">Eliminar Evento</a>
+                            </div>
                           </li>
+
                           <li class="nav-item">
-                              <a class="nav-link" href="#team">Quienes somos?</a>
+                              <a class="nav-link"  [routerLink]="['/quiensomos']" routerLinkActive="active" >Quienes somos?</a>
                           </li>
 
                       </ul>
@@ -28,3 +36,7 @@
           </nav>
           </div>
       </div>
+<br>
+<br>
+<br>
+<br>
