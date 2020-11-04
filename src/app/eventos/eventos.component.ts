@@ -5,8 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './eventos.component.html',
   styleUrls: ['./eventos.component.css']
 })
-export class EventosComponent implements OnInit {
 
+export class EventosComponent implements OnInit {
+  procesaPropagar(mensaje) {
+    console.log(mensaje);
+  }
   constructor() { }
 
   ngOnInit(): void {

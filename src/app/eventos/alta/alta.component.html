@@ -1,0 +1,28 @@
+<form>
+  <div class="form-group">
+    <div class="form-group">
+      <label >Nombre</label>
+      <input name="nombre" #vNombre type="text" class="form-control" id="exampleInputPassword1" placeholder="Nombre del evento">
+    </div>
+    <div class="form-group">
+      <label>Ubicacion</label>
+      <input name="ubicacion" #vUbi type="text" class="form-control" id="exampleInputPassword1" placeholder="Ubicacion del evento">
+    </div>
+    <label>Email address</label>
+    <input name="email" #vEmail type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduce e-mail de contacto">
+    <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu e-mail</small>
+  </div>
+
+  <p>Descripcion del evento:</p>
+
+  <p><textarea name="descripcion" #vDescripcion rows="4" cols="181" placeholder="Añade una descripcion para el evento"></textarea></p>
+  <div id="mostrar">{{MostrarInfo2}}</div>
+
+
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Introduce imagen del evento</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+
+  <button type="button" (click)="EnviarDatos(vNombre.value, vUbi.value, vEmail.value, vDescripcion.value)" class="btn btn-primary">Enviar</button>
+</form>

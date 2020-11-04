@@ -1,7 +1,6 @@
 export class eventos{
 
 
-
   constructor(
     public nombre: string,
     public ubicacion: string,

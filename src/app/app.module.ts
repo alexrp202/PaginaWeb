@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,9 +9,9 @@ import { InicioComponent } from './inicio/inicio.component';
 import { FooterComponent } from './footer/footer.component';
 import { EventosComponent } from './eventos/eventos.component';
 import { QuiensomosComponent } from './quiensomos/quiensomos.component';
-import { AltaComponent } from './alta/alta.component';
-import { ModificarComponent } from './modificar/modificar.component';
-import { EliminarComponent } from './eliminar/eliminar.component';
+import { AltaComponent } from './eventos/alta/alta.component';
+import { ModificarComponent } from './eventos/modificar/modificar.component';
+import { EliminarComponent } from './eventos/eliminar/eliminar.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { EliminarComponent } from './eliminar/eliminar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
