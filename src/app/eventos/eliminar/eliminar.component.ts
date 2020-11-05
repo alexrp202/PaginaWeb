@@ -7,7 +7,12 @@ import { Component, OnInit, EventEmitter,Output  } from '@angular/core';
 })
 export class EliminarComponent implements OnInit {
 
+  nombre = 'Rodriguez Pablo';
+  edad = 10;
+  sueldos = [1700, 1600, 1900];
   mensaje: string;
+
+
 
   @Output() propagar = new EventEmitter<string>();
 
@@ -16,7 +21,5 @@ export class EliminarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-onPropagar() {
-    this.propagar.emit(this.mensaje);
-  }
+
 }

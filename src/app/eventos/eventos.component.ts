@@ -20,4 +20,5 @@ export class EventosComponent implements OnInit {
     this.listaeventos.push(nEvent)
   }
 
+
 }

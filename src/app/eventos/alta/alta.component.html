@@ -1,3 +1,5 @@
+
+<div *ngIf="mostrar">
 <form>
   <div class="form-group">
     <div class="form-group">
@@ -21,8 +23,13 @@
 
   <div class="form-group">
     <label for="exampleFormControlFile1">Introduce imagen del evento</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    <input   type="file" class="form-control-file" id="exampleFormControlFile1">
   </div>
 
-  <button type="button" (click)="EnviarDatos(vNombre.value, vUbi.value, vEmail.value, vDescripcion.value)" class="btn btn-primary">Enviar</button>
+  <button type="button"  (click)="EnviarDatos(vNombre.value, vUbi.value, vEmail.value, vDescripcion.value)"  class="btn btn-primary">Enviar</button>
 </form>
+
+
+
+</div>
+<button type="button" (click)="mostrar=!mostrar" class="btn btn-primary">Mostrar Formulario</button>
