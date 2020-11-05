@@ -1,3 +1,9 @@
-<app-eliminar
-(propagar)="procesaPropagar($event)"
-></app-eliminar>
+<app-alta (altaEvento)="addEvento($event)"></app-alta>
+<ul *ngFor="let item of listaeventos">
+  <li>
+     {{item.nombre}}
+  </li>
+  <li>
+    {{item.ubicacion}}
+ </li>
+</ul>

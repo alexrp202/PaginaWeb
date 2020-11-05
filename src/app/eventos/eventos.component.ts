@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { eventos } from '../models/eventos.model'
 @Component({
   selector: 'app-eventos',
   templateUrl: './eventos.component.html',
@@ -7,12 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class EventosComponent implements OnInit {
-  procesaPropagar(mensaje) {
-    console.log(mensaje);
-  }
+
+  listaeventos: eventos[] = []
+
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addEvento(nEvent){
+    this.listaeventos.push(nEvent)
   }
 
 }

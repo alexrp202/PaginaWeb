@@ -6,7 +6,6 @@ export class eventos{
     public ubicacion: string,
     public correo: string,
     public descripcion: string,
-    public imageURL: string
   ) { }
 
 }

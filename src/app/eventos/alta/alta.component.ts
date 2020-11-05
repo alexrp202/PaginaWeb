@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import {eventos} from '../../models/eventos.model'
 
 
 @Component({
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./alta.component.css']
 })
 export class AltaComponent implements OnInit {
+
+  @Output() altaEvento = new EventEmitter<eventos>();
 
   constructor() { }
 
@@ -25,7 +28,7 @@ export class AltaComponent implements OnInit {
     this.MostrarInfo2="La descripcion tiene muy pocos caracteres"
   }
 
-
+  this.altaEvento.emit(new eventos(nombre,ubicacion,email,descripcion));
 
 
   }
