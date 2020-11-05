@@ -12,6 +12,9 @@ import { QuiensomosComponent } from './quiensomos/quiensomos.component';
 import { AltaComponent } from './eventos/alta/alta.component';
 import { ModificarComponent } from './eventos/modificar/modificar.component';
 import { EliminarComponent } from './eventos/eliminar/eliminar.component';
+import { DetalleTrabajadorComponent } from './quiensomos/detalle-trabajador/detalle-trabajador.component';
+import { ElementoTrabajadorComponent } from './quiensomos/elemento-trabajador/elemento-trabajador.component';
+import { ListaTrabajadorComponent } from './quiensomos/lista-trabajador/lista-trabajador.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { EliminarComponent } from './eventos/eliminar/eliminar.component';
     QuiensomosComponent,
     AltaComponent,
     ModificarComponent,
-    EliminarComponent
+    EliminarComponent,
+    DetalleTrabajadorComponent,
+    ElementoTrabajadorComponent,
+    ListaTrabajadorComponent
   ],
   imports: [
     BrowserModule,

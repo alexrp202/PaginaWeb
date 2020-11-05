@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { trabajador } from './trabajador';
 
 @Component({
   selector: 'app-quiensomos',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quiensomos.component.css']
 })
 export class QuiensomosComponent implements OnInit {
-
+  trabajador = '';
+  mostrar = true;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  trabajadorSeleccionado: trabajador;
+  cambiarTrabajador(trabajador) {
+    this.trabajadorSeleccionado = trabajador;
+  }
 }

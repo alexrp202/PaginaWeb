@@ -1,1 +1,14 @@
-<p>quiensomos works!</p>
+<div class="container">
+
+    <div class="col">
+      <h3>Trabajadores a tu disposicion:</h3>
+      <app-lista-trabajador (informarEvent)="cambiarTrabajador($event)"></app-lista-trabajador>
+    </div>
+
+    <div class="col">
+      <h3>Detalles del trabajador:</h3>
+      <app-detalle-trabajador [trabajador]="trabajadorSeleccionado"></app-detalle-trabajador>
+    </div>
+    </div>
+
+
