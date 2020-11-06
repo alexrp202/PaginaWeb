@@ -24,7 +24,7 @@ export class ListaTrabajadorComponent implements OnInit {
 
     this.trabajador[2].nombre = 'Valenti';
     this.trabajador[2].apellidos = 'Casas';
-    this.trabajador[2].imagen = 'https://picsum.photos/200/300';
+    this.trabajador[2].imagen = 'https://www.cinemascomics.com/wp-content/uploads/2020/08/thor-vengadores-endgame-gemas-del-infinito-960x720.jpg';
     this.trabajador[2].descripcion = 'El puto amo';
 }
 

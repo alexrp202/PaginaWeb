@@ -9,6 +9,7 @@ import { eventos } from '../models/eventos.model'
 export class EventosComponent implements OnInit {
 
   listaeventos: eventos[] = []
+  listaeventos_prueba: eventos[] = []
 
 
   constructor() { }
@@ -20,5 +21,25 @@ export class EventosComponent implements OnInit {
     this.listaeventos.push(nEvent)
   }
 
+
+  cont_1;
+  Editar(posicion,nombre,ubicacion,correo,desripcion){
+
+    for (let item of this.listaeventos){
+      // this.cont_1++;
+      this.cont_1 = this.listaeventos.indexOf.length;
+      if(nombre == item.nombre && posicion == posicion){
+
+
+      }
+
+  }
+
+  }
+Borrar(posicion){
+this.listaeventos.splice(posicion,1);
+
+// this.listaeventos;
+}
 
 }
