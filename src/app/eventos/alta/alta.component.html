@@ -1,35 +1,161 @@
 
-<div *ngIf="mostrar">
-<form>
-  <div class="form-group">
+  <form [formGroup]="myForm" (ngSubmit)="EnviarDatos()" >
     <div class="form-group">
-      <label >Nombre</label>
-      <input name="nombre" #vNombre type="text" class="form-control" id="exampleInputPassword1" placeholder="Nombre del evento">
+      <div class="form-group">
+        <label>Nombre</label>
+        <input
+          name="nombre"
+          [(ngModel)]="ModeloFormulario.nombre"
+          #vNombre
+          name="name"
+          formControlName="name"
+          #vNombre
+          type="text"
+          class="form-control"
+          placeholder="Nombre del evento"
+        />
+      </div>
+      <div
+      *ngIf="myForm.get('name').hasError('required') && myForm.get('name').touched"
+      class="alert alert-danger"
+    >
+      Este campo es obligatorio
     </div>
-    <div class="form-group">
-      <label>Ubicacion</label>
-      <input name="ubicacion" #vUbi type="text" class="form-control" id="exampleInputPassword1" placeholder="Ubicacion del evento">
-    </div>
-    <label>Email address</label>
-    <input name="email" #vEmail type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduce e-mail de contacto">
-    <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu e-mail</small>
+
+    <div
+    *ngIf="myForm.get('name').hasError('maxlength') && myForm.get('name').touched"
+    class="alert alert-danger"
+  >
+    El nombre es demasiado largo
+  </div>
+  <div
+    *ngIf="myForm.get('name').hasError('minlength') && myForm.get('name').touched"
+    class="alert alert-danger"
+  >
+    El nombre es demasiado corto
   </div>
 
-  <p>Descripcion del evento:</p>
 
-  <p><textarea name="descripcion" #vDescripcion rows="4" cols="181" placeholder="Añade una descripcion para el evento"></textarea></p>
-  <div id="mostrar">{{MostrarInfo2}}</div>
-
-
-  <div class="form-group">
-    <label for="exampleFormControlFile1">Introduce imagen del evento</label>
-    <input   type="file" class="form-control-file" id="exampleFormControlFile1">
+      <div class="form-group">
+        <label>Ubicacion</label>
+        <input
+          name="ubicacion"
+          [(ngModel)]="ModeloFormulario.ubicacion"
+          formControlName="Ubicacion"
+          #vUbi
+          type="text"
+          class="form-control"
+          placeholder="Ubicacion del evento"
+        />
+      </div>
+      <div
+      *ngIf="myForm.get('Ubicacion').hasError('required') && myForm.get('Ubicacion').touched"
+      class="alert alert-danger"
+    >
+      Este campo es obligatorio
+    </div>
+    <div
+    *ngIf="myForm.get('Ubicacion').hasError('maxlength') && myForm.get('Ubicacion').touched"
+    class="alert alert-danger"
+  >
+    La ubicacion es demasiado larga
   </div>
-
-  <button type="button"  (click)="EnviarDatos(vNombre.value, vUbi.value, vEmail.value, vDescripcion.value)"  class="btn btn-primary">Enviar</button>
-</form>
-
-
-
+  <div
+  *ngIf="myForm.get('Ubicacion').hasError('minlength') && myForm.get('Ubicacion').touched"
+  class="alert alert-danger"
+>
+  La ubicacion es demasiado corta
 </div>
-<button type="button" (click)="mostrar=!mostrar" class="btn btn-primary">Mostrar Formulario</button>
+
+
+      <label>Email address</label>
+      <input
+        name="email"
+        [(ngModel)]="ModeloFormulario.correo"
+        #vEmail
+        formControlName="email"
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Introduce e-mail de contacto"
+      />
+      <div
+        *ngIf="myForm.get('email').hasError('email') && myForm.get('email').touched"
+        class="alert alert-danger"
+      >
+        Es necesario introducir un email valido
+      </div>
+
+    </div>
+    <div
+    *ngIf="myForm.get('email').hasError('required') && myForm.get('email').touched"
+    class="alert alert-danger"
+  >
+    Este campo es obligatorio
+  </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Descripcion del evento:</label>
+      <textarea
+        class="form-control"
+        [(ngModel)]="ModeloFormulario.descripcion"
+        formControlName="Descripcion"
+        rows="3"
+      ></textarea>
+    </div>
+    <div
+      *ngIf="myForm.get('Descripcion').hasError('required') && myForm.get('Descripcion').touched"
+      class="alert alert-danger"
+    >
+      Este campo es obligatorio
+    </div>
+
+    <div
+    *ngIf="myForm.get('Descripcion').hasError('maxlength') && myForm.get('Descripcion').touched"
+    class="alert alert-danger"
+  >
+    La descripcion es demasiado larga
+  </div>
+
+  <div
+  *ngIf="myForm.get('Descripcion').hasError('minlength') && myForm.get('Descripcion').touched"
+  class="alert alert-danger"
+>
+  La descripcion es demasiado corta
+</div>
+
+
+    <label>Imagen</label>
+    <input
+      name="imagen"
+      formControlName="imagen"
+      [(ngModel)]="ModeloFormulario.imagen"
+      #vimagen
+      type="text"
+      class="form-control"
+      placeholder="Introduce el LINK de la imagen"
+    />
+    <div
+      *ngIf="myForm.get('imagen').hasError('required') && myForm.get('imagen').touched"
+      class="alert alert-danger"
+    >
+      Este campo es obligatorio
+    </div>
+    <div
+      *ngIf="myForm.get('imagen').hasError('pattern') && myForm.get('imagen').touched"
+      class="alert alert-danger"
+    >
+      Debes introducir un link valido
+    </div>
+    <br />
+    <button
+      [disabled]="myForm.invalid"
+      type="submit"
+      class="btn btn-primary"
+    >
+      Enviar
+    </button>
+  </form>
+
+

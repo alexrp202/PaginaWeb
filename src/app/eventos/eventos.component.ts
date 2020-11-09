@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { eventos } from '../models/eventos.model'
 @Component({
   selector: 'app-eventos',
@@ -8,9 +8,9 @@ import { eventos } from '../models/eventos.model'
 
 export class EventosComponent implements OnInit {
 
-  listaeventos: eventos[] = []
-  listaeventos_prueba: eventos[] = []
 
+  listaeventos: eventos[] = []
+  modificarmodelo: eventos;
 
   constructor() { }
 
@@ -18,24 +18,16 @@ export class EventosComponent implements OnInit {
   }
 
   addEvento(nEvent){
+    this.modificarmodelo = undefined;
     this.listaeventos.push(nEvent)
   }
 
 
-  cont_1;
-  Editar(posicion,nombre,ubicacion,correo,desripcion){
-
-    for (let item of this.listaeventos){
-      // this.cont_1++;
-      this.cont_1 = this.listaeventos.indexOf.length;
-      if(nombre == item.nombre && posicion == posicion){
-
-
-      }
-
+  Editar(item){
+    this.modificarmodelo=item;
   }
 
-  }
+
 Borrar(posicion){
 this.listaeventos.splice(posicion,1);
 

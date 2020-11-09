@@ -1,51 +1,54 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import {eventos} from '../../models/eventos.model'
-
+import { Component, OnChanges, Output, EventEmitter,Input,SimpleChanges } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { eventos } from '../../models/eventos.model';
 
 @Component({
   selector: 'app-alta',
   templateUrl: './alta.component.html',
-  styleUrls: ['./alta.component.css']
+  styleUrls: ['./alta.component.css'],
 })
-export class AltaComponent implements OnInit {
-
+export class AltaComponent implements OnChanges {
   @Output() altaEvento = new EventEmitter<eventos>();
+  @Input() modificarmodelo:eventos;
 
 
-  mostrar:Boolean = false;
-  contador:Number = 0;
-  constructor() { }
+  myForm: FormGroup;
 
-  ngOnInit(): void {
+  ModeloFormulario = new eventos('', '', '', '', '');
+
+  mostrar: Boolean = false;
+  contador: Number = 0;
+  constructor(private _builder: FormBuilder) {
+    this.myForm = this._builder.group({
+      name: ['', Validators.compose([Validators.minLength(3), Validators.maxLength(30), Validators.required])],
+      Ubicacion: ['', Validators.compose([Validators.minLength(6), Validators.maxLength(30), Validators.required])],
+      email: ['', Validators.compose([Validators.email, Validators.required])],
+      Descripcion: ['', Validators.compose([Validators.minLength(20), Validators.maxLength(50), Validators.required])],
+      imagen: ['',  Validators.compose([Validators.required,Validators.pattern("(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?") ])],
+
+
+
+
+    });
   }
 
-  erDNI = "^[0-9]{8}[A-Za-z]{1}$]";
-  MostrarInfo = "";
-  MostrarInfo2 = "";
 
-
-  EnviarDatos(nombre,ubicacion,correo,descripcion,contador){
-
-    contador=0;
-    if(nombre.value==""){
-      alert("El nombre esta vacio");
-      contador++;
+  ngOnChanges(changes:SimpleChanges):void{
+    if(this.modificarmodelo !== undefined){
+      this.ModeloFormulario = this.modificarmodelo;
     }
-  if(descripcion.length<2){
-    this.MostrarInfo2="La descripcion tiene muy pocos caracteres"
-    contador++;
   }
 
-
-if(contador==0){
-  this.altaEvento.emit(new eventos(nombre,ubicacion,correo,descripcion));
-}
-else{
-  alert("Te faltan parametros");
-}
-
-
+  EnviarDatos() {
+    if(!this.modificarmodelo){
+      this.altaEvento.emit(this.ModeloFormulario);
+    }
+    this.modificarmodelo = undefined;
+    this.ModeloFormulario = new eventos('', '', '', '', '');
+    this.myForm.reset();
   }
 
-
+  Modificardatos(){
+    this.ModeloFormulario = this.modificarmodelo
+  }
 }

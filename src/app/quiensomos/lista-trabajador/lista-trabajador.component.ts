@@ -12,19 +12,22 @@ export class ListaTrabajadorComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.trabajador[0].asignacion='Alumno'
     this.trabajador[0].nombre = 'Alex';
-    this.trabajador[0].apellidos = 'Rodriguez';
+    this.trabajador[0].apellidos = 'Rodriguez Piñeiro';
     this.trabajador[0].imagen = '';
     this.trabajador[0].descripcion = 'Un mandao';
 
+    this.trabajador[1].asignacion='Maestro'
     this.trabajador[1].nombre = 'Nelson';
-    this.trabajador[1].apellidos = 'Perez';
-    this.trabajador[1].imagen='https://picsum.photos/300/200';
+    this.trabajador[1].apellidos = 'Perez Varona';
+    this.trabajador[1].imagen='https://media-exp1.licdn.com/dms/image/C5603AQHPbOMSG7sYzQ/profile-displayphoto-shrink_200_200/0?e=1610582400&v=beta&t=AeOyxWC5ZKEVP5pMfsa1OT-9fWUNrRMDVYbFyWS7zd0';
     this.trabajador[1].descripcion = 'El puto amo';
 
+    this.trabajador[2].asignacion='Maestro'
     this.trabajador[2].nombre = 'Valenti';
-    this.trabajador[2].apellidos = 'Casas';
-    this.trabajador[2].imagen = 'https://www.cinemascomics.com/wp-content/uploads/2020/08/thor-vengadores-endgame-gemas-del-infinito-960x720.jpg';
+    this.trabajador[2].apellidos = 'Casas Diaz';
+    this.trabajador[2].imagen = 'https://media-exp1.licdn.com/dms/image/C4D03AQED5eAQXoEP0g/profile-displayphoto-shrink_200_200/0?e=1610582400&v=beta&t=klkjxb36K_kY1SdoFdvhFBV-yKC157aP7YHHcvw_MNs';
     this.trabajador[2].descripcion = 'El puto amo';
 }
 

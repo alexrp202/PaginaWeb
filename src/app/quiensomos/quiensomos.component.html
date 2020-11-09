@@ -1,14 +1,30 @@
-<div class="container">
-
-    <div class="col">
-      <h3>Trabajadores a tu disposicion:</h3>
-      <app-lista-trabajador (informarEvent)="cambiarTrabajador($event)"></app-lista-trabajador>
-    </div>
-
-    <div class="col">
-      <h3>Detalles del trabajador:</h3>
-      <app-detalle-trabajador [trabajador]="trabajadorSeleccionado"></app-detalle-trabajador>
-    </div>
-    </div>
 
 
+<table>
+  <td class="td1">
+
+    </td>
+    <td class="td">
+
+
+      </td>
+
+</table>
+
+
+<div class="table-responsive">
+  <table class="table ">
+    <tr>
+      <th><div class="col">
+        <h3>Trabajadores a tu disposicion:</h3>
+        <app-lista-trabajador (informarEvent)="cambiarTrabajador($event)"></app-lista-trabajador>
+      </div></th>
+      <th >   <div class="container">
+        <div class="col">
+          <h3>Detalles del trabajador:</h3>
+          <app-detalle-trabajador [trabajador]="trabajadorSeleccionado"></app-detalle-trabajador>
+        </div>
+        </div></th>
+    </tr>
+  </table>
+  </div>

@@ -1,4 +1,18 @@
-<p>Nombre: {{trabajador.nombre}}</p>
-<p>Apellidos: {{trabajador.apellidos}}</p>
-<img [src]="trabajador.imagen">
-<p>Descripcion: {{trabajador.descripcion}}</p>
+
+
+<div class="card w-50">
+  <div class="card-header">
+      <h3>{{trabajador.asignacion}}</h3>
+  </div>
+  <img [src]="trabajador.imagen" width="100%">
+  <div class="card-body">
+      <h3 class="card-title"> {{trabajador.nombre}}</h3> <h4 class="card-text">{{trabajador.apellidos}}</h4>
+
+      <p class="card-text">Descripcion: {{trabajador.descripcion}}</p>
+  </div>
+  <div class="card-footer">
+      Ilerna
+  </div>
+</div>
+
+

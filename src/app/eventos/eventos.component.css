@@ -1,5 +1,9 @@
 
 ul{
-  list-style: none;
+  display: inline-block;
 }
-
+aside{
+  float: right;
+  width: 500px;
+  position: relative;
+}
