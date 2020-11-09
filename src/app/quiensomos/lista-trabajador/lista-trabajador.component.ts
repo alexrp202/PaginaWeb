@@ -42,11 +42,11 @@ export class ListaTrabajadorComponent implements OnInit {
     this.trabajador[4].imagen = '../../assets/img/SEGURIDAD.jpg';
     this.trabajador[4].descripcion = 'El puto amo';
 
-    this.trabajador[5].asignacion='DJ de fiestas'
+    this.trabajador[5].asignacion='DJ'
     this.trabajador[5].nombre = 'Yordi';
     this.trabajador[5].apellidos = 'LoGey';
     this.trabajador[5].imagen = '../../assets/img/DJ.jpg';
-    this.trabajador[5].descripcion = 'El puto amo';
+    this.trabajador[5].descripcion = 'El mejor DJ ';
 }
 
   informarTrabajador(event) {

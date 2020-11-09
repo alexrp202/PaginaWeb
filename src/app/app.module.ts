@@ -9,8 +9,6 @@ import { FooterComponent } from './footer/footer.component';
 import { EventosComponent } from './eventos/eventos.component';
 import { QuiensomosComponent } from './quiensomos/quiensomos.component';
 import { AltaComponent } from './eventos/alta/alta.component';
-import { ModificarComponent } from './eventos/modificar/modificar.component';
-import { EliminarComponent } from './eventos/eliminar/eliminar.component';
 import { DetalleTrabajadorComponent } from './quiensomos/detalle-trabajador/detalle-trabajador.component';
 import { ElementoTrabajadorComponent } from './quiensomos/elemento-trabajador/elemento-trabajador.component';
 import { ListaTrabajadorComponent } from './quiensomos/lista-trabajador/lista-trabajador.component';
@@ -24,8 +22,6 @@ import { ListaTrabajadorComponent } from './quiensomos/lista-trabajador/lista-tr
     EventosComponent,
     QuiensomosComponent,
     AltaComponent,
-    ModificarComponent,
-    EliminarComponent,
     DetalleTrabajadorComponent,
     ElementoTrabajadorComponent,
     ListaTrabajadorComponent
