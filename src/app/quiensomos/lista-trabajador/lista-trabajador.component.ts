@@ -7,7 +7,7 @@ import { trabajador } from '../trabajador';
 })
 export class ListaTrabajadorComponent implements OnInit {
 
-  trabajador = [new trabajador(), new trabajador(), new trabajador()];
+  trabajador = [new trabajador(), new trabajador(), new trabajador(), new trabajador(), new trabajador, new trabajador];
   @Output() informarEvent = new EventEmitter<trabajador>();
   constructor() { }
 
@@ -29,6 +29,24 @@ export class ListaTrabajadorComponent implements OnInit {
     this.trabajador[2].apellidos = 'Casas Diaz';
     this.trabajador[2].imagen = 'https://media-exp1.licdn.com/dms/image/C4D03AQED5eAQXoEP0g/profile-displayphoto-shrink_200_200/0?e=1610582400&v=beta&t=klkjxb36K_kY1SdoFdvhFBV-yKC157aP7YHHcvw_MNs';
     this.trabajador[2].descripcion = 'El puto amo';
+
+    this.trabajador[3].asignacion='Tecnico Web'
+    this.trabajador[3].nombre = 'Dani';
+    this.trabajador[3].apellidos = 'El Florea';
+    this.trabajador[3].imagen = '../../assets/img/DANIEL.jpg';
+    this.trabajador[3].descripcion = 'El puto amo';
+
+    this.trabajador[4].asignacion='Seguridad'
+    this.trabajador[4].nombre = 'Jordi';
+    this.trabajador[4].apellidos = 'Cocklell';
+    this.trabajador[4].imagen = '../../assets/img/SEGURIDAD.jpg';
+    this.trabajador[4].descripcion = 'El puto amo';
+
+    this.trabajador[5].asignacion='DJ de fiestas'
+    this.trabajador[5].nombre = 'Yordi';
+    this.trabajador[5].apellidos = 'LoGey';
+    this.trabajador[5].imagen = '../../assets/img/DJ.jpg';
+    this.trabajador[5].descripcion = 'El puto amo';
 }
 
   informarTrabajador(event) {

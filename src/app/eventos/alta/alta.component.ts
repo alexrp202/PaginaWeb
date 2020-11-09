@@ -25,10 +25,6 @@ export class AltaComponent implements OnChanges {
       email: ['', Validators.compose([Validators.email, Validators.required])],
       Descripcion: ['', Validators.compose([Validators.minLength(20), Validators.maxLength(50), Validators.required])],
       imagen: ['',  Validators.compose([Validators.required,Validators.pattern("(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?") ])],
-
-
-
-
     });
   }
 
