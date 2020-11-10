@@ -1,5 +1,5 @@
 import { Component, OnChanges, Output, EventEmitter,Input,SimpleChanges } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, CheckboxRequiredValidator } from '@angular/forms';
 import { eventos } from '../../models/eventos.model';
 
 @Component({
@@ -24,6 +24,7 @@ export class AltaComponent implements OnChanges {
       email: ['', Validators.compose([Validators.email, Validators.required])],
       Descripcion: ['', Validators.compose([Validators.minLength(20), Validators.maxLength(50), Validators.required])],
       imagen: ['',  Validators.compose([Validators.required,Validators.pattern("(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?") ])],
+      checkbox:[CheckboxRequiredValidator]
     });
   }
 

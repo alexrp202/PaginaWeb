@@ -15,7 +15,7 @@ export class ListaTrabajadorComponent implements OnInit {
     this.trabajador[0].asignacion='Alumno'
     this.trabajador[0].nombre = 'Alex';
     this.trabajador[0].apellidos = 'Rodriguez Piñeiro';
-    this.trabajador[0].imagen = '';
+    this.trabajador[0].imagen = '../../assets/img/ALEX.jpg';
     this.trabajador[0].descripcion = 'Un mandao';
 
     this.trabajador[1].asignacion='Maestro'
