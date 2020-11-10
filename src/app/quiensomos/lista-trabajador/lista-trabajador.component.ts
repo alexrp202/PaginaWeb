@@ -12,7 +12,7 @@ export class ListaTrabajadorComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.trabajador[0].asignacion='Alumno'
+    this.trabajador[0].asignacion='El Pupilo'
     this.trabajador[0].nombre = 'Alex';
     this.trabajador[0].apellidos = 'Rodriguez Piñeiro';
     this.trabajador[0].imagen = '../../assets/img/ALEX.jpg';
@@ -34,13 +34,13 @@ export class ListaTrabajadorComponent implements OnInit {
     this.trabajador[3].nombre = 'Dani';
     this.trabajador[3].apellidos = 'El Florea';
     this.trabajador[3].imagen = '../../assets/img/DANIEL.jpg';
-    this.trabajador[3].descripcion = 'El puto amo';
+    this.trabajador[3].descripcion = 'Un tecnico web mal pagado';
 
     this.trabajador[4].asignacion='Seguridad'
     this.trabajador[4].nombre = 'Jordi';
     this.trabajador[4].apellidos = 'Cocklell';
     this.trabajador[4].imagen = '../../assets/img/SEGURIDAD.jpg';
-    this.trabajador[4].descripcion = 'El puto amo';
+    this.trabajador[4].descripcion = '"Como te acerques, te meto un puño"';
 
     this.trabajador[5].asignacion='DJ'
     this.trabajador[5].nombre = 'Yordi';
