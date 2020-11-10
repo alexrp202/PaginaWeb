@@ -16,11 +16,10 @@ export class AltaComponent implements OnChanges {
 
   ModeloFormulario = new eventos('', '', '', '', '');
 
-  mostrar: Boolean = false;
   contador: Number = 0;
   constructor(private _builder: FormBuilder) {
     this.myForm = this._builder.group({
-      name: ['', Validators.compose([Validators.minLength(3), Validators.maxLength(30), Validators.required])],
+      name: ['', Validators.compose([Validators.minLength(2), Validators.maxLength(30), Validators.required])],
       Ubicacion: ['', Validators.compose([Validators.minLength(6), Validators.maxLength(30), Validators.required])],
       email: ['', Validators.compose([Validators.email, Validators.required])],
       Descripcion: ['', Validators.compose([Validators.minLength(20), Validators.maxLength(50), Validators.required])],
@@ -34,6 +33,7 @@ export class AltaComponent implements OnChanges {
       this.ModeloFormulario = this.modificarmodelo;
     }
   }
+
 
   EnviarDatos() {
     if(!this.modificarmodelo){
